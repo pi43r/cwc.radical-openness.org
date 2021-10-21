@@ -34,7 +34,7 @@ function loadmemory(){
     const memory = document.querySelector('.memory')
     for (c of memory.children){
         if(c.id == hash){
-            c.style.display = 'block'
+            c.style.display = 'flex'
             c.scrollIntoView()
         } else {
             c.style.display = 'none'

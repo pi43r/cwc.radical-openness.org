@@ -1,0 +1,230 @@
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "vremenagroteskbook", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.scroller-top {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  letter-spacing:-1.3px;
+  z-index: 40;
+}
+
+#turning-circle {
+  max-height: 50px;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.welcome {
+  height: 85vh;
+  background: #aa1cfc;
+  overflow: hidden;
+}
+
+.welcome .logo {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  height: 90%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  position: absolute;
+  width: 90%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.apply {
+  font-size: 5rem;
+  position: absolute;
+  margin: auto;
+  top: 25vh;
+  left: 2rem;
+  z-index: 999;
+  letter-spacing:-3.5px;
+}
+
+.center{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+}
+
+.info > div {
+  border: black 2px solid;
+  padding: 2rem;
+  width: 25%;
+  transform-origin: left;
+  transition: all 500ms linear;
+}
+
+.info div:hover {
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .info {
+    flex-direction: column;
+  }
+  .info > div {
+    padding: 2rem;
+    padding-right: 6rem;
+    width: 100%;
+  }
+  .info > div:hover {
+    width: initial;
+  }
+}
+
+.violet {
+  color: #aa1cfc;
+}
+
+.about {
+  background: url("assets/about_bg3.png");
+  background-size: cover;
+  background-position: center center;
+  
+}
+.application {
+  background: url("assets/application_bg3.png");
+  background-size: cover;
+  background-position: top left;
+}
+.timeline {
+  background: url("assets/timeline_bg3.png");
+  background-size: auto;
+  background-position: top center;
+}
+.cost {
+  background: url("assets/cost_bg2.png");
+  background-size: auto; 
+  /* cover fills the frame, contain resizes so it fits inside the frame, auto uses the initial px values of the image  */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images */
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.btn {
+  color: black;
+  background: white;
+  border: 4px black solid;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: white;
+  background: #aa1cfc;
+  border: 4px #deff00 solid;
+}
+
+
+/* typography */
+
+h2 {
+  font-size: 5rem;
+  font-style: italic;
+  letter-spacing:-3px;
+  margin-top: 0;
+  word-break: break-all;
+  line-height: 0.6;
+}
+p {
+  text-indent: 2rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing:-1px;
+  
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+ul li {
+  list-style: none;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+a{
+  color: #aa1cfc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #deff00;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing:-1px;
+  border-bottom: 20px black solid ;
+}
+
+footer > div {
+  width: 25%;
+  padding: 1rem;
+}
+
+s, strike{text-decoration:none;position:relative;}
+s::before, strike::before {
+    top: 45%; /*tweak this to adjust the vertical position if it's off a bit due to your font family */
+    background:#aa1cfc; /*this is the color of the line*/
+    opacity:1;
+    content: '';
+    width: 130%;
+    position: absolute;
+    height:.12em;
+    border-radius:.1em;
+    left: -24%;
+    white-space:nowrap;
+    display: block;
+    transform: rotate(-45deg);  
+}
+s.straight::before, strike.straight::before{transform: rotate(0deg);left:-4%;width:104%;}

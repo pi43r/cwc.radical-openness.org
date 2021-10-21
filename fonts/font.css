@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Authentic Sans";
+  src: url("AUTHENTICSans-90.woff2") format("woff2"),
+    url("AUTHENTICSans-90.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Drafting Mono";
+  src: url("DraftingMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Retromoticons";
+  src: url("Retromoticons-RPLv.ttf");
+}
+
+@font-face {
+  font-family: "Noailles Times";
+  src: url("cyber-cycles-font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Fixedsys";
+  src: url("FSEX302-alt.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Violet";
+  src: url("VioletSans-Regular.otf") format("otf"),
+    url("VioletSans-Regular.woff") format("woff"),
+    url("VioletSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "C64";
+  src: url("C64/C64_Pro-STYLE.otf") format("otf"),
+    url("C64/C64_Pro-STYLE.woff") format("woff"),
+    url("C64/C64_Pro-STYLE.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NotCourier";
+  src: url("NotCourierSans-Bold.otf") format("otf"),
+    url("NotCourierSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "3270";
+  src: url("3270Condensed-Regular.otf") format("otf");
+}

@@ -52,6 +52,12 @@ p {
 #Conversations {
   display: none;
 }
+#Camping {
+  display: none;
+}
+#Working {
+  display: none;
+}
 
 p {
   --fluid-type-min: 0.7rem;

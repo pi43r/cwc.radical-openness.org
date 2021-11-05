@@ -1,5 +1,5 @@
 const title = document.getElementById("title");
-const doing = ["Conversations", "Camping", "Cooking"];
+const doing = ["Conversations"];
 const withComputers = "with Computers";
 const emotes = "*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzz";
 
@@ -44,5 +44,5 @@ function loadmemory() {
 
 loadmemory();
 // do something every second
-setInterval(replaceEmoticon, 600);
+setInterval(replaceEmoticon, 2000);
 window.addEventListener("hashchange", loadmemory);

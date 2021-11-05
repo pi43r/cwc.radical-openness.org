@@ -266,6 +266,11 @@ a {
   max-width: 150px;
 }
 
+.attention {
+  color: var(--red);
+  background: var(--blue);
+}
+
 @media (max-width: 768px) {
   #title {
     height: 200px;

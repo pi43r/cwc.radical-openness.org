@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>𝘾𝙤𝙣𝙫𝙚𝙧𝙨𝙖𝙩𝙞𝙤𝙣𝙨 𝙬𝙞𝙩𝙝 𝘾𝙤𝙢𝙥𝙪𝙩𝙚𝙧𝙨</title>
+    <title>Camping 𝙬𝙞𝙩𝙝 𝘾𝙤𝙢𝙥𝙪𝙩𝙚𝙧𝙨</title>
     <link rel="stylesheet" href="../fonts/font.css" />
     <link rel="stylesheet" href="../style.css" />
     <script defer src="../script.js"></script>
@@ -65,11 +65,17 @@
       .qr {
         margin-top: -10%;
         margin-left: 47%;
-        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         opacity: 0.9;
         max-height: 15%;
       }
-      a{
+      .qr > img {
+        height: 100%;
+      }
+      a {
         font-size: 0.9rem;
       }
     </style>
@@ -86,8 +92,15 @@
         alt=""
       />
     </div>
-
-    <img class="qr" src="../cwc_qr.svg" />
+    <div class="qr">
+      <img style="background: var(--bg);" src="../cwc_qr.svg" />
+      <a
+        href="http://cwc.radical-openness.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        >cwc.radical-openness.org</a
+      >
+    </div>
 
     <div class="suchevents">
       <a href="#Conversations" class="mono event relative">
@@ -125,8 +138,8 @@
           </caption>
           <tr>
             <td>
-              10th => 20th of November 2021 <br />
-              10:00 - 18:00
+              10th => 19th of November 2021 <br />
+              10:00 - 18:30
             </td>
           </tr>
           <tr>
@@ -151,10 +164,7 @@
             </a>
           </caption>
           <tr>
-            <td>
-              Building the
-              Zombie Cloud
-            </td>
+            <td>Building the Zombie Cloud</td>
           </tr>
           <tr class="dashed-bottom">
             <td>
@@ -163,10 +173,7 @@
             </td>
           </tr>
           <tr>
-            <td>
-              Serving 
-              Sounds
-            </td>
+            <td>Serving Sounds</td>
           </tr>
           <tr>
             <td>
@@ -177,18 +184,35 @@
         </table>
       </a>
     </div>
-    <div class="endofmessage dashed-top">
-      <div class="supporters">
-        <img src="/logos/servus.svg" alt="servus.at" />
+    <div
+      class="endofmessage dashed-top"
+      style="display: flex; flex-direction: row; justify-content: space-evenly"
+    >
+      <small style="width: 90%;">
+        <span style="font-family: 'FixedSys';">Conversations with Computers</span> addresses contemporary artistic
+        research in the field of AI, focusing on new languages that emerge
+        between humans and machines, but also how work and communication are
+        facilitated through technological means. The program is organized by the
+        net culture initiative
+        <img style="max-width: 100px" src="/logos/servus.svg" alt="servus.at" />
+        &nbsp; in cooperation with the Department of
         <img
           src="/logos/timebased.svg"
-          style="max-width: 35px"
+          style="max-height: 43px; margin-bottom: -20px;"
           alt="timebased media"
+        />&nbsp; of the
+        <img
+          style="max-width: 100px; margin-bottom: -10px;"
+          src="/logos/Kuni.svg"
+          alt="Kunstuniversität Linz"
         />
-        <img src="/logos/Kuni.svg" alt="Kunstuniversität Linz" />
+        .
+      </small>
+      <div class="supporters">
+        <small>sponsors</small>
         <img
           src="/logos/OOE.svg"
-          style="max-width: 50px"
+          style="max-width: 50px;"
           alt="Land Oberösterreich"
         />
         <img src="/logos/BKA.svg" alt="Bundeskanzleramt" />
@@ -199,28 +223,103 @@
   <script>
     const bg = document.querySelector(".bg");
     const img = document.querySelector(".bg > img");
+    // const imgList = [
+    //   "generated/colab-prediction-ynqscxplt5gvzpwtydsjfwm5ra.png",
+    //   "generated/cwc_nopixel-2.png",
+    //   "generated/cwc_nopixel.png",
+    //   "generated/cwc_pixel-3.png",
+    //   "generated/cwc_pixelart-1.png",
+    //   "generated/cwc_pixelart.png",
+    //   "generated/replicate-prediction-2azdci5mrvgljmpieegw2no4wq.png",
+    //   "generated/replicate-prediction-6tzh5wxehbarfkkalfk2sa5okq.png",
+    //   "generated/replicate-prediction-6yij445dffaovn7l3x4cpla7ry.png",
+    //   "generated/replicate-prediction-7kd4kf3knzddffanjbu23axsru.png",
+    //   "generated/replicate-prediction-ay4d6ycpzzbx5lpjdbxxgfsy34.png",
+    //   "generated/replicate-prediction-ccbj6iubundtnfll6vgvmnfarq.png",
+    //   "generated/replicate-prediction-exo5anwwfrcb7hcmwsoz7a7yhe.png",
+    //   "generated/replicate-prediction-exo5anwwfrcb7hcmwsoz7a7yhe(1).png",
+    //   "generated/replicate-prediction-gwrh4pnwhfc5zikqmxzjdzlhby.png",
+    //   "generated/replicate-prediction-hbr5hvwokfebvpoyh7ec7wa4zi.png",
+    //   "generated/replicate-prediction-hbr5hvwokfebvpoyh7ec7wa4zi(1).png",
+    //   "generated/replicate-prediction-jar3tv3zqzb3xm6wwdlsamp57m.png",
+    //   "generated/replicate-prediction-jqjt7ehnprcurcfm4xhyvuig4u.png",
+    //   "generated/replicate-prediction-yeismtxiyvhmtjthaxzi4l3d2e.png",
+    //   "generated/replicate-prediction-ynqscxplt5gvzpwtydsjfwm5ra.png",
+    // ];
+
     const imgList = [
-      "generated/colab-prediction-ynqscxplt5gvzpwtydsjfwm5ra.png",
-      "generated/cwc_nopixel-2.png",
-      "generated/cwc_nopixel.png",
-      "generated/cwc_pixel-3.png",
-      "generated/cwc_pixelart-1.png",
-      "generated/cwc_pixelart.png",
-      "generated/replicate-prediction-2azdci5mrvgljmpieegw2no4wq.png",
-      "generated/replicate-prediction-6tzh5wxehbarfkkalfk2sa5okq.png",
-      "generated/replicate-prediction-6yij445dffaovn7l3x4cpla7ry.png",
-      "generated/replicate-prediction-7kd4kf3knzddffanjbu23axsru.png",
-      "generated/replicate-prediction-ay4d6ycpzzbx5lpjdbxxgfsy34.png",
-      "generated/replicate-prediction-ccbj6iubundtnfll6vgvmnfarq.png",
-      "generated/replicate-prediction-exo5anwwfrcb7hcmwsoz7a7yhe.png",
-      "generated/replicate-prediction-exo5anwwfrcb7hcmwsoz7a7yhe(1).png",
-      "generated/replicate-prediction-gwrh4pnwhfc5zikqmxzjdzlhby.png",
-      "generated/replicate-prediction-hbr5hvwokfebvpoyh7ec7wa4zi.png",
-      "generated/replicate-prediction-hbr5hvwokfebvpoyh7ec7wa4zi(1).png",
-      "generated/replicate-prediction-jar3tv3zqzb3xm6wwdlsamp57m.png",
-      "generated/replicate-prediction-jqjt7ehnprcurcfm4xhyvuig4u.png",
-      "generated/replicate-prediction-yeismtxiyvhmtjthaxzi4l3d2e.png",
-      "generated/replicate-prediction-ynqscxplt5gvzpwtydsjfwm5ra.png",
+      "rudalle/camping with computers/Кемпинг с компьютерами0.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами17.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами2.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами10.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами18.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами3.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами11.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами19.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами4.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами12.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами1.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами5.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами13.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами20.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами6.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами14.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами21.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами7.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами15.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами22.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами8.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами16.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами23.jpg",
+      "rudalle/camping with computers/Кемпинг с компьютерами9.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком0.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком20.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком10.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком21.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком11.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком22.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком12.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком23.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком13.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком2.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком14.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком3.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком15.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком4.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком16.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком5.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком17.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком6.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком18.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком7.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком19.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком8.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком1.jpg",
+      "rudalle/a computer talking to a human/компьютер, разговаривающий с человеком9.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами0.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами17.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами2.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами10.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами18.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами3.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами11.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами19.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами4.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами12.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами1.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами5.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами13.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами20.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами6.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами14.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами21.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами7.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами15.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами22.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами8.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами16.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами23.jpg",
+      "rudalle/conversations with computers/разговоры с компьютерами9.jpg",
     ];
     window.setInterval(() => {
       img.src = imgList[Math.floor(Math.random() * imgList.length)];

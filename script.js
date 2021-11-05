@@ -1,5 +1,5 @@
 const title = document.getElementById("title");
-const doing = ["Conversations"];
+const doing = ["Camping", "Conversations", "Cooking"];
 const withComputers = "with Computers";
 const emotes = "*ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzz";
 

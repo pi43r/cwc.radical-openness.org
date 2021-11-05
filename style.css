@@ -60,9 +60,9 @@ p {
 }
 
 p {
-  --fluid-type-min: 0.7rem;
+  --fluid-type-min: 0.3rem;
   --fluid-type-max: 2rem;
-  --fluid-type-target: 1.8vw;
+  --fluid-type-target: 1vw;
 }
 
 .mono {
@@ -136,6 +136,7 @@ caption {
   border-left: 2px solid var(--blue);
   padding-left: 0.5rem;
 }
+
 .tt-bio {
   --fluid-type-min: 1rem;
   --fluid-type-max: 1.5rem;
@@ -143,26 +144,26 @@ caption {
   border-left: 2px solid var(--red);
   padding-left: 0.5rem;
 }
-.screening::after{
-  content: ' screening ';
+.screening::after {
+  content: " screening ";
   font-size: 1.4rem;
   color: var(--blue);
 }
-.concert::after{
-  content: ' concert';
+.concert::after {
+  content: " concert";
   font-size: 1.4rem;
   color: var(--blue);
   transform: translateX(-1rem);
 }
 
-.endconversation{
+.endconversation {
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.register{
+.register {
   background: var(--red);
   color: var(--bg);
   font-size: 1.8rem;
@@ -170,9 +171,8 @@ caption {
   padding: 1rem;
   box-shadow: 2px 2px 0 1px var(--blue);
 }
-.register:active{
+.register:active {
   box-shadow: 0px 0px 0 var(--blue);
-
 }
 .dashed {
   border: 3px dashed var(--blue);
@@ -286,4 +286,44 @@ a {
   .timetable {
     flex-wrap: wrap;
   }
+}
+
+/* collabsible */
+
+input[type="checkbox"] {
+  display: none;
+}
+.wrap-collabsible {
+  margin: 1.2rem 0;
+}
+.lbl-toggle {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+.toggle-blue{
+  color: var(--blue);
+  border: 3px solid var(--blue);
+}
+.toggle-red{
+  color: var(--red);
+  border: 3px solid var(--red);
+}
+.lbl-toggle:hover, .lbl-toggle:focus {
+  color: var(--fg);
+  border-style: dashed  ;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 1000vh;
+}
+.toggle:checked + .lbl-toggle {
+  text-align: right;
 }

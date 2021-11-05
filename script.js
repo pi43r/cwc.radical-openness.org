@@ -46,3 +46,14 @@ loadmemory();
 // do something every second
 setInterval(replaceEmoticon, 2000);
 window.addEventListener("hashchange", loadmemory);
+
+// a11ty for toggle
+let myLabels = document.querySelectorAll(".lbl-toggle");
+Array.from(myLabels).forEach((label) => {
+  label.addEventListener("keydown", (e) => {
+    if (e.which === 32 || e.which === 13) {
+      e.preventDefault();
+      label.click();
+    }
+  });
+});

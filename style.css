@@ -67,7 +67,7 @@ p {
 
 .mono {
   font-family: "NotCourier", Courier, monospace;
-  font-size: 1.4rem;
+  
 }
 
 .emoticon {
@@ -78,6 +78,7 @@ p {
 
 table {
   border-collapse: collapse;
+  font-size: 1.4rem;
 }
 table td {
   vertical-align: top;

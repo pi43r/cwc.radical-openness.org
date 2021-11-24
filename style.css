@@ -212,6 +212,10 @@ caption {
   box-shadow: 0 2px 0 4px inset var(--red);
 }
 
+.flex-1 {
+  flex-grow: 1;
+}
+
 .expand {
   width: 100%;
 }

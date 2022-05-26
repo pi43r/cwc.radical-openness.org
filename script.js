@@ -40,6 +40,10 @@ function loadmemory() {
       c.style.display = "none";
     }
   }
+  document.getElementById('Conversations-nav').querySelector('table').classList.remove('t-focus')
+  document.getElementById('Camping-nav').querySelector('table').classList.remove('t-focus')
+  document.getElementById('Working-nav').querySelector('table').classList.   remove('t-focus')
+  document.getElementById(hash + '-nav').querySelector('table').classList.add('t-focus')
 }
 
 loadmemory();

@@ -212,6 +212,11 @@ caption {
   box-shadow: 0 2px 0 4px inset var(--red);
 }
 
+.t-focus{
+  border: 3px solid var(--blue);
+  box-shadow: 0 2px 0 4px inset var(--red);
+}
+
 .flex-1 {
   flex-grow: 1;
 }
